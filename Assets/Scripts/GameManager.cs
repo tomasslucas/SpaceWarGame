@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -21,7 +19,7 @@ public class GameManager : MonoBehaviour
         GMState = GameManagerState.Opening;
     }
 
-    // Update is called once per frame
+    // Update GameManager State
     void UpdateGameManagerState()
     {
         switch (GMState)
@@ -33,5 +31,12 @@ public class GameManager : MonoBehaviour
             case GameManagerState.GameOver:
                 break;
         }
+    }
+
+    //Set the gameManager State
+    public void SetGameManagerState(GameManagerState state)
+    {
+        GMState = state;
+        UpdateGameManagerState();
     }
 }

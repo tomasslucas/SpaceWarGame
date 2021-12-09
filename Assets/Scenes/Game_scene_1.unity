@@ -533,6 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9d8513bf65bf24182190d97081a35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayButton: {fileID: 884793584}
+  PlayerShip: {fileID: 1885659823}
 --- !u!1 &816044487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,6 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c2c2bca9a6f954fa59d072183a6eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 794977829}
   shield: {fileID: 197216548}
   firePoint: {fileID: 1720549893}
   bulletPrefab: {fileID: 823280311361941584, guid: 9a5ea7f8b7ef123438f3334307277251, type: 3}

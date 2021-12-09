@@ -15,7 +15,7 @@ public class AsteroideSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void SpawnAsteroide()

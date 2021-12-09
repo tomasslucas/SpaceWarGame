@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Player_Control : MonoBehaviour
 {
+    public GameObject GameManager; //reference to our Game Manager
     //To implement the shield
     private bool shielded;
     [SerializeField]
@@ -102,11 +103,11 @@ public class Player_Control : MonoBehaviour
 
                 if (Lives == 0) // If the player don't have lives left
                 {
-                    //Or Change Game State to GameOver State;
-                    //Hide the player ship
-                    //gameObject.SetActive(false);
+                    //Change Game State to GameOver State;
+                    GameManager.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
 
-                    Destroy(gameObject); //Destroy the player ship
+                    //Hide the player ship
+                    gameObject.SetActive(false);
                 }
 
             }
