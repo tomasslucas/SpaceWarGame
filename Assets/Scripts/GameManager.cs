@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
             case GameManagerState.Opening:
                 break;
             case GameManagerState.Gameplay:
+                //Hide PlayButton on Gameplay state
+                PlayButton.SetActive(false);
+
+                //Active PlayerShip
+                PlayerShip.GetComponent<Player_Control>().Init();
                 break;
             case GameManagerState.GameOver:
                 break;
@@ -37,6 +42,13 @@ public class GameManager : MonoBehaviour
     public void SetGameManagerState(GameManagerState state)
     {
         GMState = state;
+        UpdateGameManagerState();
+    }
+
+    //The PlayButton will call this function
+    public void StartGamePlay()
+    {
+        GMState = GameManagerState.Gameplay;
         UpdateGameManagerState();
     }
 }

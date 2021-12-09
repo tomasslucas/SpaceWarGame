@@ -38,11 +38,6 @@ public class Player_Control : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void Start()
-    {
-        Init();
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -104,7 +99,7 @@ public class Player_Control : MonoBehaviour
                 if (Lives == 0) // If the player don't have lives left
                 {
                     //Change Game State to GameOver State;
-                    GameManager.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
+                    GameManager.GetComponent<GameManager>().SetGameManagerState(global::GameManager.GameManagerState.GameOver);
 
                     //Hide the player ship
                     gameObject.SetActive(false);
