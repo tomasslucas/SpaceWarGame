@@ -4,12 +4,12 @@ public class AsteroideSpawner : MonoBehaviour
 {
     public GameObject asteroide;
 
-    float maxSpawnRateInSeconds = 1f;
+    float maxSpawnRateInSeconds = 3f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("SpawnAsteroide", maxSpawnRateInSeconds);
+        
     }
 
     // Update is called once per frame
@@ -43,7 +43,31 @@ public class AsteroideSpawner : MonoBehaviour
             spawnInSeconds = 1f;
 
         Invoke("SpawnAsteroide", spawnInSeconds);
+    }
+    
+    //Function to increase the dificult of the game (but not really)
+    public void IncreaseSpawnRate()
+    {
+        if (maxSpawnRateInSeconds > 1f)
+            maxSpawnRateInSeconds--;
+        if (maxSpawnRateInSeconds == 1f)
+            CancelInvoke("IncreaseSpawnRate");
+    }
+    //Function to Start the Spawner
+    public void ScheduleAsteroideSpawner()
+    {
+        Invoke("SpawnAsteroide", maxSpawnRateInSeconds);
 
-        //If you need help.https://www.youtube.com/watch?v=k3GN3FuyqnQ&ab_channel=PixelelementGames
+        //increase spawnRate every 30s
+        InvokeRepeating("IncreaseSpawnRate", 0f, 30f);
+    }
+
+
+
+    //Function to stop the AsteroideSpawner
+    public void UnscheduleAsteroideSpawner()
+    {
+        CancelInvoke("SpawnAsteroide");
+        CancelInvoke("IncreaseSpawnRate");
     }
 }
