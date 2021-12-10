@@ -16,6 +16,7 @@ public class GameScore : MonoBehaviour
         set
         {
             this.score = value;
+            UpdateScoreTextUI();
         }
     }
     // Start is called before the first frame update

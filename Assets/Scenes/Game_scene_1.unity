@@ -340,7 +340,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 519420032}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &494968788 stripped
 Transform:
@@ -427,12 +427,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1406299554}
   - {fileID: 794977830}
   - {fileID: 1885659824}
   - {fileID: 493436605}
   - {fileID: 494968788}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &731576711
 PrefabInstance:
@@ -443,7 +444,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5323962536105997381, guid: 58fe0cbb26217d3448f6b59afc43eaee, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5323962536105997381, guid: 58fe0cbb26217d3448f6b59afc43eaee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -521,7 +522,7 @@ Transform:
   m_Children:
   - {fileID: 1013334045}
   m_Father: {fileID: 519420032}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &794977831
 MonoBehaviour:
@@ -539,7 +540,7 @@ MonoBehaviour:
   PlayerShip: {fileID: 1885659823}
   AsteroideSpawner: {fileID: 493436603}
   GameOverUI: {fileID: 1013334043}
-  scoreTextUI: {fileID: 0}
+  scoreTextUI: {fileID: 1488335073}
 --- !u!1 &816044487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1005,7 @@ RectTransform:
   - {fileID: 2042387938}
   - {fileID: 884793585}
   - {fileID: 299301834}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1168,7 +1169,7 @@ Transform:
   - {fileID: 1720549893}
   - {fileID: 197216549}
   m_Father: {fileID: 519420032}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1885659825
 BoxCollider2D:
