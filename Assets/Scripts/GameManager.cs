@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //References
     public GameObject PlayButton; //Reference to PlayButton
     public GameObject PlayerShip; //Reference to PlayerShip
     public GameObject AsteroideSpawner; //Reference to AsteroideSpawner
     public GameObject GameOverUI; //Reference to GameOverImage
+    public GameObject scoreTextUI; //Reference to score text UI;
     public enum GameManagerState
     {
         Opening,
@@ -35,6 +37,9 @@ public class GameManager : MonoBehaviour
 
                 break;
             case GameManagerState.Gameplay:
+                //Rest the Score
+                scoreTextUI.GetComponent<GameScore>().Score = 0;
+
                 //Hide PlayButton on Gameplay state
                 PlayButton.SetActive(false);
 
@@ -52,7 +57,7 @@ public class GameManager : MonoBehaviour
                 GameOverUI.SetActive(true);
 
                 //Change Game Manager State to Opening State after 8s
-                Invoke("ChangeToOpeningState", 8f);
+                Invoke("ChangeToOpeningState", 3f);
                 break;
         }
     }

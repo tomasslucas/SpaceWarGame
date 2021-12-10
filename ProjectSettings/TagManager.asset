@@ -9,6 +9,7 @@ TagManager:
   - Other_things
   - PlayerBullet
   - EnemyBullet
+  - ScoreTextTag
   layers:
   - Default
   - TransparentFX

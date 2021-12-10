@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AsteroideControl : MonoBehaviour
 {
+    public GameObject scoreTextUI; //Reference to score text UI;
+
     public GameObject Explosion; //Explosion Prefab
 
     float speed; //For the asteroide speed
@@ -9,6 +11,9 @@ public class AsteroideControl : MonoBehaviour
     void Start()
     {
         speed = 5f; //set speed
+
+        //Get the score text tag
+        scoreTextUI = GameObject.FindGameObjectWithTag("ScoreTextTag");
     }
 
     // Update is called once per frame
@@ -37,8 +42,12 @@ public class AsteroideControl : MonoBehaviour
         //Detect the collision with other things and what happens if that colision happens
         if ((col.tag == "PlayerBullet") || (col.tag == "PlayerShip"))
         {
-            PlayExplosion();
+            PlayExplosion(); //Play Explosion animation
 
+            //add 10 point to the score
+            scoreTextUI.GetComponent<GameScore>().Score += 10;
+
+            //Destoy this gameobject (asteoride)
             Destroy(gameObject);
         }
     }

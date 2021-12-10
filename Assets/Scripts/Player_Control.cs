@@ -34,6 +34,9 @@ public class Player_Control : MonoBehaviour
         //Update the lives UI text
         LivesUIText.text = Lives.ToString();
 
+        //Reset the player position
+        transform.position = new Vector2(0, -4);
+
         //Set the player lives to active
         gameObject.SetActive(true);
     }
@@ -66,6 +69,7 @@ public class Player_Control : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
+
     //Function for the shield
     void CheckShield()
     {

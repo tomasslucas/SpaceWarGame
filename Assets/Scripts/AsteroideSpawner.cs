@@ -9,7 +9,7 @@ public class AsteroideSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -44,7 +44,7 @@ public class AsteroideSpawner : MonoBehaviour
 
         Invoke("SpawnAsteroide", spawnInSeconds);
     }
-    
+
     //Function to increase the dificult of the game (but not really)
     public void IncreaseSpawnRate()
     {
