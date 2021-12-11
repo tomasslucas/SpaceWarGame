@@ -37,7 +37,8 @@ public class AsteroideSpawner : MonoBehaviour
 
         if (maxSpawnRateInSeconds > 1f)
         {
-            spawnInSeconds = Random.Range(1f, maxSpawnRateInSeconds);
+            //Chosing a number between 1 and x
+            spawnInSeconds = Random.Range(100f, maxSpawnRateInSeconds);
         }
         else
             spawnInSeconds = 1f;
@@ -56,10 +57,12 @@ public class AsteroideSpawner : MonoBehaviour
     //Function to Start the Spawner
     public void ScheduleAsteroideSpawner()
     {
+        maxSpawnRateInSeconds = 3f;
+
         Invoke("SpawnAsteroide", maxSpawnRateInSeconds);
 
-        //increase spawnRate every 30s
-        InvokeRepeating("IncreaseSpawnRate", 0f, 30f);
+        //increase spawnRate every 1s
+        InvokeRepeating("IncreaseSpawnRate", 0f, 1f);
     }
 
 
