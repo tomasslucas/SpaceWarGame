@@ -1266,7 +1266,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 823280311361941584, guid: 9a5ea7f8b7ef123438f3334307277251, type: 3}
   Explosion: {fileID: 2544149065532477149, guid: c8320b323dea1654f9e7a90e7c296e08, type: 3}
   bulletForce: 20
-  moveSpeed: 8
+  moveSpeed: 10
   rb: {fileID: 1885659828}
   LivesUIText: {fileID: 816044489}
 --- !u!50 &1885659828

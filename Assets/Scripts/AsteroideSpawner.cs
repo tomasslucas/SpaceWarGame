@@ -4,7 +4,7 @@ public class AsteroideSpawner : MonoBehaviour
 {
     public GameObject asteroide;
 
-    float maxSpawnRateInSeconds = 3f;
+    float maxSpawnRateInSeconds = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +37,11 @@ public class AsteroideSpawner : MonoBehaviour
 
         if (maxSpawnRateInSeconds > 1f)
         {
-            //Chosing a number between 1 and x
-            spawnInSeconds = Random.Range(100f, maxSpawnRateInSeconds);
+            //Chosing a number between 1 and maxSpawnRateInSeconds
+            spawnInSeconds = Random.Range(0.1f, maxSpawnRateInSeconds);
         }
         else
-            spawnInSeconds = 1f;
+            spawnInSeconds = 0.1f;
 
         Invoke("SpawnAsteroide", spawnInSeconds);
     }
@@ -49,20 +49,24 @@ public class AsteroideSpawner : MonoBehaviour
     //Function to increase the dificult of the game (but not really)
     public void IncreaseSpawnRate()
     {
+        //Tenho que estudar esta questão
         if (maxSpawnRateInSeconds > 1f)
-            maxSpawnRateInSeconds--;
-        if (maxSpawnRateInSeconds == 1f)
+            maxSpawnRateInSeconds = maxSpawnRateInSeconds - 0.1f;
+        if (maxSpawnRateInSeconds == 0.1f)
+        {
             CancelInvoke("IncreaseSpawnRate");
+        }
     }
     //Function to Start the Spawner
     public void ScheduleAsteroideSpawner()
     {
-        maxSpawnRateInSeconds = 3f;
+        //reset max spawn rate
+        maxSpawnRateInSeconds = 1.5f;
 
         Invoke("SpawnAsteroide", maxSpawnRateInSeconds);
 
         //increase spawnRate every 1s
-        InvokeRepeating("IncreaseSpawnRate", 0f, 1f);
+        InvokeRepeating("IncreaseSpawnRate", 0f, 5f);
     }
 
 

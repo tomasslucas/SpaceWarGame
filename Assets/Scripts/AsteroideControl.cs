@@ -10,7 +10,7 @@ public class AsteroideControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5f; //set speed
+        speed = 8f; //set speed
 
         //Get the score text tag
         scoreTextUI = GameObject.FindGameObjectWithTag("ScoreTextTag");
