@@ -19,7 +19,7 @@ public class StarControl : MonoBehaviour
         Vector2 position = transform.position;
 
         //New position
-        position = new Vector2(position.x, position.y - speed * Time.deltaTime);
+        position = new Vector2(position.x, position.y + speed * Time.deltaTime);
 
         //update enemy position
         transform.position = position;
