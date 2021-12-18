@@ -25,10 +25,10 @@ public class StarGenerator : MonoBehaviour
 
             //Set random speed of the star
             Star.GetComponent<StarControl>().speed = -(1f * Random.value + 0.5f);
-        }
 
-        //Set the star a child of Star Generator
-        star.transform.parent = transform;
+            //Set the star a child of Star Generator
+            Star.transform.parent = transform;
+        }
     }
 
     // Update is called once per frame
