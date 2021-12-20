@@ -26,7 +26,7 @@ public class PlanetControl : MonoBehaviour
 
     //Function to Dequeue the planet and set the flag isMoving to true
     //So that the planet scrols down the screen
-    public void MovePlanetDown()
+    void MovePlanetDown()
     {
         EnqueuePlanets();
 
@@ -41,12 +41,12 @@ public class PlanetControl : MonoBehaviour
         aPlanet.GetComponent<PlanetScript>().isMoving = true;
     }
 
-    public void EnqueuePlanets()
+    void EnqueuePlanets()
     {
         foreach (GameObject aPlanet in Planets)
         {
             //If the planet is below the screen and not moving
-            if ((aPlanet.transform.position.y < 0) && (!aPlanet.GetComponent<PlanetScript>().isMoving))
+            if ((aPlanet.transform.position.y < -5) && (!aPlanet.GetComponent<PlanetScript>().isMoving))
             {
                 //Reset the planet position
                 aPlanet.GetComponent<PlanetScript>().ResetPosition();

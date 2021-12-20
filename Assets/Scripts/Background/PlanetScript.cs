@@ -34,7 +34,7 @@ public class PlanetScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMoving)
+        if (!isMoving)
             return;
 
         //Get the current position of the planet
