@@ -17,7 +17,7 @@ public class PlanetControl : MonoBehaviour
         availablePlanets.Enqueue(Planets[1]);
         availablePlanets.Enqueue(Planets[2]);
 
-        InvokeRepeating("MovePlanetDown", 0, 20f);
+        InvokeRepeating("MovePlanetDown", 0, 5f);
     }
 
     // Update is called once per frame
