@@ -6,11 +6,13 @@ public class PlanetControl : MonoBehaviour
 {
     public GameObject[] Planets; //an array of the planet Prefab
 
+    //queue to hold the planets
     Queue<GameObject> availablePlanets = new Queue<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
+        //Had the planets to the queue (enqueue them)
         availablePlanets.Enqueue(Planets[0]);
         availablePlanets.Enqueue(Planets[1]);
         availablePlanets.Enqueue(Planets[2]);
@@ -46,7 +48,7 @@ public class PlanetControl : MonoBehaviour
         foreach (GameObject aPlanet in Planets)
         {
             //If the planet is below the screen and not moving
-            if ((aPlanet.transform.position.y < -5) && (!aPlanet.GetComponent<PlanetScript>().isMoving))
+            if ((aPlanet.transform.position.y < 0) && (!aPlanet.GetComponent<PlanetScript>().isMoving))
             {
                 //Reset the planet position
                 aPlanet.GetComponent<PlanetScript>().ResetPosition();

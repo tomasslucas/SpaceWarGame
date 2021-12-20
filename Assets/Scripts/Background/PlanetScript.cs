@@ -10,7 +10,7 @@ public class PlanetScript : MonoBehaviour
     Vector2 min; //botton left of the screen
     Vector2 max; //top right of the screen
 
-    private void Awake()
+    void Awake()
     {
         isMoving = false;
         
@@ -21,7 +21,7 @@ public class PlanetScript : MonoBehaviour
         max.y = max.y + GetComponent<SpriteRenderer>().sprite.bounds.extents.y;
 
         //subtract the planet sprite half height to min y
-        min.y = min.y + GetComponent<SpriteRenderer>().sprite.bounds.extents.y;
+        min.y = min.y - GetComponent<SpriteRenderer>().sprite.bounds.extents.y;
     }
 
 
