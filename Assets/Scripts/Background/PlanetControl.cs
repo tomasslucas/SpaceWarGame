@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +22,7 @@ public class PlanetControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //Function to Dequeue the planet and set the flag isMoving to true
@@ -33,7 +32,7 @@ public class PlanetControl : MonoBehaviour
         EnqueuePlanets();
 
         //If the queue is empty then return
-        if(availablePlanets.Count == 0)
+        if (availablePlanets.Count == 0)
             return;
 
         //get a planet from the queue
