@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverUI; //Reference to GameOverImage
     public GameObject scoreTextUI; //Reference to score text UI;
     public GameObject timeCounter; //Reference to time counter gameObject;
+    public GameObject GameTitle; //Reference to Game title
     public enum GameManagerState
     {
         Opening,
@@ -36,8 +37,14 @@ public class GameManager : MonoBehaviour
                 //Set Play Button to Active
                 PlayButton.SetActive(true);
 
+                //Set Game Title to Active
+                GameTitle.SetActive(true);
+
                 break;
             case GameManagerState.Gameplay:
+                //Hide Game Title
+                GameTitle.SetActive(false);
+
                 //Rest the Score
                 scoreTextUI.GetComponent<GameScore>().Score = 0;
 
