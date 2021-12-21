@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject AsteroideSpawner; //Reference to AsteroideSpawner
     public GameObject GameOverUI; //Reference to GameOverImage
     public GameObject scoreTextUI; //Reference to score text UI;
+    public GameObject timeCounter; //Reference to time counter gameObject;
     public enum GameManagerState
     {
         Opening,
@@ -48,8 +49,15 @@ public class GameManager : MonoBehaviour
 
                 //Start the asteroideSpawner
                 AsteroideSpawner.GetComponent<AsteroideSpawner>().ScheduleAsteroideSpawner();
+
+                //Start the time counter
+                timeCounter.GetComponent<TimeCounter>().StartTimeCounter();
+
                 break;
             case GameManagerState.GameOver:
+                //Stop the time Counter
+                timeCounter.GetComponent<TimeCounter>().StopTimeCounter();
+
                 //Stop AsteroideSpawner
                 AsteroideSpawner.GetComponent<AsteroideSpawner>().UnscheduleAsteroideSpawner();
 
