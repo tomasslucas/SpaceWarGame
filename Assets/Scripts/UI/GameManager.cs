@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject timeCounter; //Reference to time counter gameObject;
     public GameObject GameTitle; //Reference to Game title
     public GameObject scoreMedalText; //reference to the Score Medal text
+    public GameObject TimeMedalText; //reference to the Time Medal text
     public enum GameManagerState
     {
         Opening,
@@ -43,6 +44,9 @@ public class GameManager : MonoBehaviour
 
                 //Set ScoreMedalText to Active
                 scoreMedalText.SetActive(false);
+
+                //Set TimeMedalText to Active
+                TimeMedalText.SetActive(false);
 
                 break;
             case GameManagerState.Gameplay:

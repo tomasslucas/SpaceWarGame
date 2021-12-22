@@ -7,6 +7,8 @@ public class TimeCounter : MonoBehaviour
 {
     public GameObject GameManager; //reference to our Game Manager
     public GameObject playership; //reference to our player ship
+    public GameObject TimeMedalText; //reference to the Time Medal text
+    public GameObject TimeMedal; //reference to the time Medal
 
     Text timeUI;//Reference to TimeUI
 
@@ -58,7 +60,9 @@ public class TimeCounter : MonoBehaviour
 
                 playership.gameObject.SetActive(false);
 
-                
+                TimeMedalText.gameObject.SetActive(true);
+
+                TimeMedal.gameObject.SetActive(true);
             }
         }
     }
