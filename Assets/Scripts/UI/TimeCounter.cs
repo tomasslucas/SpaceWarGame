@@ -53,8 +53,8 @@ public class TimeCounter : MonoBehaviour
 
             timeUI.text = string.Format("{0:000}", seconds);
 
-            //See if the player got 900s in the game
-            if (seconds >= 899)
+            //See if the player got 100s in the game
+            if (seconds >= 100)
             {
                 GameManager.GetComponent<GameManager>().SetGameManagerState(global::GameManager.GameManagerState.GameOver);
 

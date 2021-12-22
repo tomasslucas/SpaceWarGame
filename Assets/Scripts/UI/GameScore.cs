@@ -33,8 +33,8 @@ public class GameScore : MonoBehaviour
         string scoreStr = string.Format("{0:000}", score);
         scoreTextUI.text = scoreStr;
 
-        //See if the player got 900pts in the game
-        if (score >= 890)
+        //See if the player got 100pts in the game
+        if (score >= 100)
         {
             GameManager.GetComponent<GameManager>().SetGameManagerState(global::GameManager.GameManagerState.GameOver);
 

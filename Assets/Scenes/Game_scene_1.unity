@@ -772,7 +772,7 @@ MonoBehaviour:
   timeCounter: {fileID: 1039893950}
   GameTitle: {fileID: 2115327348}
   scoreMedalText: {fileID: 1452016606}
-  TimeMedalText: {fileID: 0}
+  TimeMedalText: {fileID: 1643179859}
 --- !u!1 &816044487
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,9 +920,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -119642055
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 8319240887185758339, guid: 8bc73ed1a253c9046aec9080bb33c373, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1257,8 +1257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 794977829}
   playership: {fileID: 1885659823}
-  TimeMedalText: {fileID: 0}
-  TimeMedal: {fileID: 0}
+  TimeMedalText: {fileID: 1643179859}
+  TimeMedal: {fileID: 1588268955}
 --- !u!114 &1039893952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,9 +1799,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -119642055
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: -248247452180867130, guid: 8bc73ed1a253c9046aec9080bb33c373, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
