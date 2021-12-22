@@ -3,6 +3,11 @@ using UnityEngine.UI;
 
 public class GameScore : MonoBehaviour
 {
+    public GameObject GameManager; //reference to our Game Manager
+    public GameObject playership; //reference to our player ship
+    public GameObject scoreMedalText; //reference to the Score Medal text
+    public GameObject scoreMedal; //reference to the Score Medal
+
     Text scoreTextUI;
     int score;
     public int Score
@@ -27,5 +32,17 @@ public class GameScore : MonoBehaviour
     {
         string scoreStr = string.Format("{0:000}", score);
         scoreTextUI.text = scoreStr;
+
+        //See if the player got 900pts in the game
+        if (score >= 10)
+        {
+            GameManager.GetComponent<GameManager>().SetGameManagerState(global::GameManager.GameManagerState.GameOver);
+
+            playership.gameObject.SetActive(false);
+
+            scoreMedalText.gameObject.SetActive(true);
+
+            scoreMedal.gameObject.SetActive(true);
+        }
     }
 }

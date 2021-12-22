@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class TimeCounter : MonoBehaviour
 {
+    public GameObject GameManager; //reference to our Game Manager
+    public GameObject playership; //reference to our player ship
+
     Text timeUI;//Reference to TimeUI
 
     float StartTime; //The time when the player clicks on play
@@ -47,6 +50,16 @@ public class TimeCounter : MonoBehaviour
             seconds = (int)EllapseTime; //Get the seconds
 
             timeUI.text = string.Format("{0:000}", seconds);
+
+            //See if the player got 900s in the game
+            if (seconds >= 899)
+            {
+                GameManager.GetComponent<GameManager>().SetGameManagerState(global::GameManager.GameManagerState.GameOver);
+
+                playership.gameObject.SetActive(false);
+
+                
+            }
         }
     }
 }
