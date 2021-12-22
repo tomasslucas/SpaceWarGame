@@ -34,7 +34,7 @@ public class GameScore : MonoBehaviour
         scoreTextUI.text = scoreStr;
 
         //See if the player got 900pts in the game
-        if (score >= 10)
+        if (score >= 890)
         {
             GameManager.GetComponent<GameManager>().SetGameManagerState(global::GameManager.GameManagerState.GameOver);
 
