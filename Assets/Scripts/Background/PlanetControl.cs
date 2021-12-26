@@ -1,5 +1,4 @@
 using System.Collections.Generic; // for Queue
-using System.Collections;
 using UnityEngine;
 
 public class PlanetControl : MonoBehaviour

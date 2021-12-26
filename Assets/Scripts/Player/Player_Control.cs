@@ -27,6 +27,10 @@ public class Player_Control : MonoBehaviour
     const int MaxLives = 3; //Player lives (max)
     int Lives; //Cuurent player lives
 
+    //Don't let the ship get off screen
+    float ShipBondaryRadius = 1f;
+
+
     public void Init()
     {
         Lives = MaxLives;
@@ -52,6 +56,26 @@ public class Player_Control : MonoBehaviour
 
         // For vertical implent below
         //movement.y = Input.GetAxisRaw("Vertical");
+
+        //Get the spaceship position
+        Vector2 position = transform.position;
+
+        //Make the camera bounderies
+        float ScreenRatio = (float)Screen.width / (float)Screen.height;
+        float width0rtho = Camera.main.orthographicSize * ScreenRatio;
+
+        //Restrict the ship movement base on camera bounderies (x)
+        if (position.x + ShipBondaryRadius > width0rtho)
+        {
+            position.x = width0rtho - ShipBondaryRadius;
+        }
+        if (position.x - ShipBondaryRadius < -width0rtho)
+        {
+            position.x = -width0rtho + ShipBondaryRadius;
+        }
+
+        //Set new spaceship position
+        transform.position = position;
 
         if (Input.GetButtonDown("Fire1"))
         {
