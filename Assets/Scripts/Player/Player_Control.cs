@@ -30,6 +30,8 @@ public class Player_Control : MonoBehaviour
     //Don't let the ship get off screen
     float ShipBondaryRadius = 1f;
 
+    //Sound
+    public AudioSource Sound; //Get audio source sound
 
     public void Init()
     {
@@ -89,9 +91,12 @@ public class Player_Control : MonoBehaviour
     }
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        //Play the bullet soud effect
+        Sound.Play();
+
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); //Instatiate bullet prefab
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>(); //Get Rigidbody of the bullet
+        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse); //Add force to the bullet rigidbody
     }
 
     //Function for the shield
