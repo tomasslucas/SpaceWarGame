@@ -28,10 +28,4 @@ public class StarGenerator : MonoBehaviour
             Star.transform.parent = transform;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

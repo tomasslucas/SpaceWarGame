@@ -19,12 +19,6 @@ public class PlanetControl : MonoBehaviour
         InvokeRepeating("MovePlanetDown", 0, 8f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     //Function to Dequeue the planet and set the flag isMoving to true
     //So that the planet scrols down the screen
     void MovePlanetDown()

@@ -30,10 +30,12 @@ public class GameScore : MonoBehaviour
 
     void UpdateScoreTextUI()
     {
+        //Set the the score format
         string scoreStr = string.Format("{0:000}", score);
+        //Get the score text
         scoreTextUI.text = scoreStr;
 
-        //See if the player got 100pts in the game
+        //See if the player got 500pts in the game
         if (score >= 500)
         {
             GameManager.GetComponent<GameManager>().SetGameManagerState(global::GameManager.GameManagerState.GameOver);

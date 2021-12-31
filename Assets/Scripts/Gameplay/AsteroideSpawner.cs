@@ -6,18 +6,6 @@ public class AsteroideSpawner : MonoBehaviour
 
     float maxSpawnRateInSeconds = 1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void SpawnAsteroide()
     {
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
@@ -49,7 +37,7 @@ public class AsteroideSpawner : MonoBehaviour
     //Function to increase the dificult of the game (but not really)
     public void IncreaseSpawnRate()
     {
-        //Tenho que estudar esta questão
+        //How long it takes to invoke another asteroid
         if (maxSpawnRateInSeconds > 1f)
             maxSpawnRateInSeconds = maxSpawnRateInSeconds - 0.1f;
         if (maxSpawnRateInSeconds == 0.1f)

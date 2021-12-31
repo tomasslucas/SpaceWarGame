@@ -91,7 +91,7 @@ public class Player_Control : MonoBehaviour
     }
     void Shoot()
     {
-        //Play the bullet soud effect
+        //Play the bullet sound effect
         Sound.Play();
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); //Instatiate bullet prefab

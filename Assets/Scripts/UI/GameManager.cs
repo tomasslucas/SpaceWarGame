@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         GMState = GameManagerState.Gameplay;
         UpdateGameManagerState();
     }
-    //Function to cheange game manager state to opening state
+    //Function to change game manager state to opening state
     public void ChangeToOpeningState()
     {
         SetGameManagerState(GameManagerState.Opening);
