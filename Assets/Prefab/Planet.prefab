@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5226618071530737161}
   - component: {fileID: 1288158086560233254}
-  - component: {fileID: 7392372973500820624}
+  - component: {fileID: 7015321614381830112}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Untagged
@@ -72,18 +72,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5ecae1a1e8c11b04883319e52a1a6b4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f061d94efe13cc4ca9a980201f1c0f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7392372973500820624
+--- !u!114 &7015321614381830112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 726254533943774157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe5b7facb73ec174691b2392bbeba1ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 4efd01d1765b8f741b351f428854e70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  isMoving: 0
+  speed: 5
+  isMoving: 1

@@ -72,12 +72,12 @@ SpriteRenderer:
   m_SortingLayerID: 120902051
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6a7c86e805ee8d54da07d3bece4ef252, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86100ffeedaa88d4594686d3e01092a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.1875, y: 0.1875}
+  m_Size: {x: 0.03, y: 0.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2898475127590574590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d28d9ba1cee4844f9b18beab84e5300, type: 3}
+  m_Script: {fileID: 11500000, guid: 17597fca1c100de4da7a57f08a5d5753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1.026859
+  speed: 5
