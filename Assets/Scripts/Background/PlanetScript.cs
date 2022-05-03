@@ -5,6 +5,7 @@ public class PlanetScript : MonoBehaviour
 {
     public float speed; //speed of the object
     public bool isMoving; //flag to make the planet go down the screen
+    public float PlusY; //How much height you need to add to the planets position (The normal is *2)
 
     Vector2 min; //botton left of the screen
     Vector2 max; //top right of the screen
@@ -17,10 +18,13 @@ public class PlanetScript : MonoBehaviour
         max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
         //add the planet sprite half height to max y
-        max.y = max.y + GetComponent<SpriteRenderer>().sprite.bounds.extents.y;
+        //max.y = max.y + GetComponent<SpriteRenderer>().sprite.bounds.extents.y;
+        //Because it was not working, I set it manually
+        max.y = max.y + PlusY;
 
         //subtract the planet sprite half height to min y
-        min.y = min.y - GetComponent<SpriteRenderer>().sprite.bounds.extents.y;
+        //min.y = min.y - GetComponent<SpriteRenderer>().sprite.bounds.extents.y
+        min.y = min.y - PlusY;
     }
 
     // Update is called once per frame

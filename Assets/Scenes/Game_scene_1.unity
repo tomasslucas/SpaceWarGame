@@ -447,6 +447,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
+      propertyPath: PlusY
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
+      propertyPath: Plusy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
       propertyPath: speed
       value: -4
       objectReference: {fileID: 0}
@@ -1957,6 +1965,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
+      propertyPath: PlusY
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
+      propertyPath: Plusy
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
       propertyPath: speed
       value: -4
       objectReference: {fileID: 0}
@@ -2478,6 +2494,14 @@ PrefabInstance:
     - target: {fileID: 5226618071530737161, guid: 646f13baaf14c1740917354015456983, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
+      propertyPath: PlusY
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
+      propertyPath: Plusy
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7015321614381830112, guid: 646f13baaf14c1740917354015456983, type: 3}
       propertyPath: speed

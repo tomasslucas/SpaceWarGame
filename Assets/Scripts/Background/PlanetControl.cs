@@ -16,7 +16,7 @@ public class PlanetControl : MonoBehaviour
         availablePlanets.Enqueue(Planets[1]);
         availablePlanets.Enqueue(Planets[2]);
 
-        InvokeRepeating("MovePlanetDown", 0, 12f);
+        InvokeRepeating("MovePlanetDown", 0, 8f);
     }
 
     //Function to Dequeue the planet and set the flag isMoving to true
