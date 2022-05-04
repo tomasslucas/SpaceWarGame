@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameTitle; //Reference to Game title
     public GameObject scoreMedalText; //reference to the Score Medal text
     public GameObject TimeMedalText; //reference to the Time Medal text
+    public GameObject SoundButton; //Reference to SoundButton
     public enum GameManagerState
     {
         Opening,
@@ -35,6 +36,9 @@ public class GameManager : MonoBehaviour
             case GameManagerState.Opening:
                 //Hide GameOverDisplay
                 GameOverUI.SetActive(false);
+
+                //Show SoundButton
+                SoundButton.SetActive(true);
 
                 //Set Play Button to Active
                 PlayButton.SetActive(true);

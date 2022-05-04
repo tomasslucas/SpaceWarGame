@@ -828,6 +828,7 @@ MonoBehaviour:
   GameTitle: {fileID: 2115327348}
   scoreMedalText: {fileID: 1452016606}
   TimeMedalText: {fileID: 1643179859}
+  SoundButton: {fileID: 2102126701}
 --- !u!1 &816044487
 GameObject:
   m_ObjectHideFlags: 0
