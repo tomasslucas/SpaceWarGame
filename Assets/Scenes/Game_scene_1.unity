@@ -1559,7 +1559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Got The score Medal!
+  m_Text: You got the Score Medal!
 --- !u!222 &1452016608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1577,14 +1577,14 @@ RectTransform:
   m_GameObject: {fileID: 1452016606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0001678, y: 1.0001678, z: 1.0001678}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2042387938}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 380, y: -396}
+  m_AnchoredPosition: {x: 389, y: -396}
   m_SizeDelta: {x: 502.72, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1488335073
@@ -1854,8 +1854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 379, y: -358.19998}
-  m_SizeDelta: {x: 502.72, y: 34}
+  m_AnchoredPosition: {x: 389, y: -332}
+  m_SizeDelta: {x: 502.71997, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643179861
 MonoBehaviour:
